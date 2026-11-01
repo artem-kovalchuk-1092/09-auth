@@ -39,7 +39,7 @@ export async function proxy(request: NextRequest) {
           }
 
           if (isPublicRoute) {
-            return NextResponse.redirect(new URL("/profile", request.url));
+            return NextResponse.redirect(new URL("/", request.url));
           }
 
           if (isPrivateRoute) {
@@ -61,7 +61,7 @@ export async function proxy(request: NextRequest) {
   }
 
   if (isPublicRoute) {
-    return NextResponse.redirect(new URL("/profile", request.url));
+    return NextResponse.redirect(new URL("/", request.url));
   }
 
   if (isPrivateRoute) {
